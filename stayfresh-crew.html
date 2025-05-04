@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayFresh Crew</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1581574207400-fb6bb6aa7e54?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+    }
+    .btn {
+      background-color: #27ae60;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 1rem;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .services, .contact, .booking, .pricing, .testimonials {
+      background-color: white;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #2c3e50;
+      color: white;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>StayFresh Crew</h2>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#booking">Book</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Make Every Stay Sparkle!</h1>
+    <p>Expert Airbnb and deep cleaning services in Edinburgh.</p>
+    <a href="#booking" class="btn">Book a Cleaning</a>
+  </section>
+
+  <section class="section services" id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li><strong>Airbnb Turnover Cleaning:</strong> Full property reset including linens and toiletries.</li>
+      <li><strong>Deep Cleaning:</strong> Thorough kitchen, bathroom, floor, and surface cleaning.</li>
+      <li><strong>Add-Ons:</strong> Laundry service, welcome packs, eco-friendly options.</li>
+    </ul>
+  </section>
+
+  <section class="section pricing" id="pricing">
+    <h2>Pricing</h2>
+    <table>
+      <tr><th>Service</th><th>1 Bed</th><th>2 Bed</th><th>3 Bed+</th></tr>
+      <tr><td>Airbnb Turnover</td><td>£50</td><td>£65</td><td>£85+</td></tr>
+      <tr><td>Deep Cleaning</td><td>£90</td><td>£120</td><td>£150+</td></tr>
+      <tr><td>Linen Service</td><td colspan="3">+£15</td></tr>
+      <tr><td>Welcome Pack</td><td colspan="3">+£5</td></tr>
+    </table>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About StayFresh Crew</h2>
+    <p>We're a dedicated team based in Edinburgh, offering high-quality Airbnb and deep cleaning services. Whether you're hosting guests or refreshing your home, we guarantee a spotless space every time.</p>
+  </section>
+
+  <section class="section booking" id="booking">
+    <h2>Book a Cleaning</h2>
+    <form>
+      <label for="service">Service Type:</label>
+      <select id="service" name="service">
+        <option value="turnover">Airbnb Turnover</option>
+        <option value="deep">Deep Cleaning</option>
+      </select>
+
+      <label for="property">Property Size:</label>
+      <select id="property" name="property">
+        <option value="1">1 Bedroom</option>
+        <option value="2">2 Bedrooms</option>
+        <option value="3">3+ Bedrooms</option>
+      </select>
+
+      <label for="addons">Add-Ons:</label><br>
+      <input type="checkbox" id="linen" name="addons" value="linen"> Linen Service<br>
+      <input type="checkbox" id="welcome" name="addons" value="welcome"> Welcome Pack<br>
+
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date">
+
+      <label for="time">Preferred Time:</label>
+      <input type="time" id="time" name="time">
+
+      <label for="notes">Additional Notes:</label>
+      <textarea id="notes" name="notes" rows="4"></textarea>
+
+      <button class="btn" type="submit">Submit Booking Request</button>
+    </form>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 StayFresh Crew. All rights reserved.</p>
+  </footer>
+</body>
+</html>
